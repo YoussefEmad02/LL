@@ -1,0 +1,157 @@
+{% liquid
+  assign threshold = 49900
+  assign remaining = threshold | minus: cart.total_price
+  
+  assign upsell_collection = collections['upsell']
+  assign selected_product = null
+  
+  if upsell_collection and upsell_collection.products.size > 0
+    assign sorted_products = upsell_collection.products | sort: 'price'
+    
+    for product in sorted_products
+      if product.available
+        assign in_cart = false
+        for item in cart.items
+          if item.product_id == product.id
+            assign in_cart = true
+            break
+          endif
+        endfor
+        if in_cart
+          continue
+        endif
+        
+        if product.price >= remaining
+          assign selected_product = product
+          break
+        endif
+      endif
+    endfor
+    
+    if selected_product == null
+      for product in sorted_products reversed
+        assign in_cart = false
+        for item in cart.items
+          if item.product_id == product.id
+            assign in_cart = true
+            break
+          endif
+        endfor
+        if in_cart == false
+          assign selected_product = product
+          break
+        endif
+      endfor
+    endif
+  endif
+
+  if selected_product
+    assign upsell_variant_id = selected_product.first_available_variant.id
+    assign upsell_name = selected_product.title
+    assign upsell_price = selected_product.price | money
+  else
+    assign upsell_variant_id = 47552079069420
+    assign upsell_name = "Nail Serum"
+    assign upsell_price = 12500 | money
+  endif
+%}
+
+<div class="free-shipping-upsell" data-threshold="{{ threshold }}" data-upsell-id="{{ upsell_variant_id }}" style="margin: 0 var(--margin-lg) var(--margin-lg) var(--margin-lg);">
+  <div style="border: 1px solid var(--border-color); padding: var(--padding-lg); border-radius: var(--style-border-radius-md); background: rgb(var(--color-background-rgb)); box-shadow: var(--shadow-button);">
+    {% if cart.total_price < threshold %}
+      <p style="margin: 0 0 var(--margin-xs) 0; font-family: var(--font-body--family); font-weight: bold; color: var(--color-foreground);">
+        You're <span style="color: #ff0000;">{{ remaining | money }}</span> away from FREE shipping
+      </p>
+      <p style="margin: 0 0 var(--margin-md) 0; font-size: var(--font-size--sm); color: rgb(var(--color-foreground-rgb) / var(--opacity-70)); line-height: var(--line-height--body-normal);">
+        Add {{ upsell_name }} for <span style="color: #ff0000;">{{ upsell_price }}</span> or any product you want and unlock FREE shipping
+      </p>
+
+      <form method="post" action="/cart/add" class="upsell-form">
+        <input type="hidden" name="id" value="{{ upsell_variant_id }}">
+        <button type="submit" class="button button--primary upsell-submit" style="width: 100%; justify-content: center; background: var(--color-black); color: var(--color-white); border-radius: var(--style-border-radius-buttons-primary);">
+          Add {{ upsell_name }}
+        </button>
+      </form>
+    {% else %}
+      <p style="margin: 0; font-family: var(--font-body--family); font-weight: bold; color: var(--color-success); display: flex; align-items: center; gap: var(--gap-xs);">
+        <span>🎉</span> You unlocked FREE shipping!
+      </p>
+    {% endif %}
+  </div>
+</div>
+
+<script>
+  if (!window.upsellInitialized) {
+    window.upsellInitialized = true;
+    document.addEventListener('submit', function(e) {
+      if (e.target.classList.contains('upsell-form')) {
+        e.preventDefault();
+        const form = e.target;
+        const button = form.querySelector('.upsell-submit');
+        const originalText = button.textContent;
+        button.disabled = true;
+        button.textContent = 'Adding...';
+
+        const formData = new FormData(form);
+        
+        // Get all cart-items-component section IDs to update them
+        const cartItemsComponents = document.querySelectorAll('cart-items-component');
+        const sectionIds = [];
+        cartItemsComponents.forEach(comp => {
+          if (comp.dataset.sectionId) sectionIds.push(comp.dataset.sectionId);
+        });
+        formData.append('sections', sectionIds.join(','));
+
+        fetch('/cart/add.js', {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        })
+        .then(response => response.json())
+        .then(data => {
+          if (data.status) {
+            alert(data.description || data.message);
+            button.disabled = false;
+            button.textContent = originalText;
+          } else {
+            // Dispatch event to update cart components
+            const eventDetail = {
+              resource: data,
+              sourceId: 'upsell-form',
+              data: {
+                sections: data.sections,
+                source: 'upsell-form',
+                itemCount: data.quantity // simplified
+              }
+            };
+
+            const updateEvent = new CustomEvent('cart:update', {
+              bubbles: true,
+              detail: eventDetail
+            });
+            document.dispatchEvent(updateEvent);
+            
+            const addEvent = new CustomEvent('cart:add', {
+              bubbles: true,
+              detail: eventDetail
+            });
+            document.dispatchEvent(addEvent);
+
+            button.textContent = 'Added!';
+            setTimeout(() => {
+              button.disabled = false;
+              button.textContent = originalText;
+            }, 2000);
+          }
+        })
+        .catch(error => {
+          console.error('Error adding to cart:', error);
+          button.disabled = false;
+          button.textContent = originalText;
+        });
+      }
+    });
+  }
+</script>

@@ -1,0 +1,144 @@
+<script>
+  (function() {
+    const FREE_GIFT_VARIANT_ID = 47633328767212;
+    const THRESHOLD = 49900; // 499 EGP in cents
+
+    let isProcessing = false;
+
+    async function checkFreeGift() {
+      if (isProcessing) return;
+      isProcessing = true;
+
+      try {
+        const response = await fetch('/cart.js');
+        const cart = await response.json();
+        
+        const giftItem = cart.items.find(item => item.variant_id === FREE_GIFT_VARIANT_ID);
+        // Calculate total without the gift item to avoid flip-flopping if the gift itself has a price (though it should be 0)
+        const totalPriceWithoutGift = giftItem ? cart.total_price - giftItem.final_line_price : cart.total_price;
+
+        if (totalPriceWithoutGift >= THRESHOLD) {
+          if (!giftItem) {
+            console.log('Threshold reached, adding free gift...');
+            await addFreeGift();
+          } else if (giftItem.quantity !== 1) {
+            console.log('Fixing gift quantity...');
+            await updateFreeGift(1);
+          }
+        } else {
+          if (giftItem) {
+            console.log('Below threshold, removing free gift...');
+            await removeFreeGift();
+          }
+        }
+      } catch (e) {
+        console.error('Error checking free gift:', e);
+      } finally {
+        isProcessing = false;
+      }
+    }
+
+    async function addFreeGift() {
+      const sectionsToUpdate = getSectionsToUpdate();
+      const body = {
+        items: [{ id: FREE_GIFT_VARIANT_ID, quantity: 1 }],
+        sections: sectionsToUpdate.join(',')
+      };
+      const response = await fetch('/cart/add.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+      });
+      const data = await response.json();
+      refreshCart(data);
+    }
+
+    async function updateFreeGift(quantity) {
+      const sectionsToUpdate = getSectionsToUpdate();
+      const body = {
+        updates: { [FREE_GIFT_VARIANT_ID]: quantity },
+        sections: sectionsToUpdate.join(',')
+      };
+      const response = await fetch('/cart/update.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+      });
+      const data = await response.json();
+      refreshCart(data);
+    }
+
+    async function removeFreeGift() {
+      const sectionsToUpdate = getSectionsToUpdate();
+      const body = {
+        updates: { [FREE_GIFT_VARIANT_ID]: 0 },
+        sections: sectionsToUpdate.join(',')
+      };
+      const response = await fetch('/cart/update.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+      });
+      const data = await response.json();
+      refreshCart(data);
+    }
+
+    function getSectionsToUpdate() {
+      const cartItemsComponents = document.querySelectorAll('cart-items-component');
+      const sections = new Set();
+      cartItemsComponents.forEach(comp => {
+        if (comp.dataset.sectionId) sections.add(comp.dataset.sectionId);
+      });
+      // Also include any other relevant sections like cart bubbles if they exist
+      const cartBubbles = document.querySelectorAll('.cart-bubble');
+      // In this theme, sections are managed by IDs.
+      return Array.from(sections);
+    }
+
+    function refreshCart(data) {
+      if (data.sections) {
+        // Dispatch the custom event that the theme expects
+        const eventDetail = {
+          resource: data,
+          sourceId: 'free-gift-logic',
+          data: {
+            sections: data.sections,
+            source: 'free-gift-logic',
+            itemCount: data.item_count
+          }
+        };
+
+        const updateEvent = new CustomEvent('cart:update', {
+          bubbles: true,
+          detail: eventDetail
+        });
+        document.dispatchEvent(updateEvent);
+      }
+    }
+
+    // Listen for cart changes
+    document.addEventListener('cart:update', (e) => {
+      if (e.detail && e.detail.sourceId === 'free-gift-logic') return;
+      checkFreeGift();
+    });
+
+    // Handle standard add to cart
+    const originalFetch = window.fetch;
+    window.fetch = function() {
+        return originalFetch.apply(this, arguments).then(async (response) => {
+            if (response.url.includes('/cart/add.js') || response.url.includes('/cart/change.js') || response.url.includes('/cart/update.js') || response.url.includes('/cart/clear.js')) {
+                // Delay slightly to let theme finish its own updates
+                setTimeout(checkFreeGift, 500);
+            }
+            return response;
+        });
+    };
+
+    // Initial check
+    if (document.readyState === 'complete') {
+        checkFreeGift();
+    } else {
+        window.addEventListener('load', checkFreeGift);
+    }
+  })();
+</script>
