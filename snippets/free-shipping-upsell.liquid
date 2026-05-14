@@ -121,10 +121,10 @@
   <div class="free-shipping-upsell__inner">
     {% if cart.total_price < threshold %}
       <p class="free-shipping-upsell__title">
-        You're <span style="color: #ff0000;">{{ remaining | money }}</span> away from FREE shipping
+        You're <span style="color: #ff0000;">{{ remaining | money }}</span> away from FREE shipping & Complimentary Nail Serum
       </p>
       <p class="free-shipping-upsell__text">
-        Add {{ upsell_name }} for <span style="color: #ff0000;">{{ upsell_price }}</span> or any product you want and unlock FREE shipping
+        Add {{ upsell_name }} for <span style="color: #ff0000;">{{ upsell_price }}</span> or any product you want and unlock FREE shipping & Complimentary Nail Serum
       </p>
 
       <form method="post" action="/cart/add" class="upsell-form">
@@ -135,7 +135,7 @@
       </form>
     {% else %}
       <p class="free-shipping-upsell__success">
-        <span>🎉</span> You unlocked FREE shipping!
+        <span>🎉</span> You unlocked FREE shipping & Complimentary Nail Serum
       </p>
     {% endif %}
   </div>
