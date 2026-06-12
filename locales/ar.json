@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+>>>>>>> 87ae04f097f3af21223d7c949998553aaa4cc13b
 {
   "customer_accounts": {
     "addresses": {
@@ -1883,7 +1895,11 @@
         "address_title": "العنوان",
         "shipping_used_as_billing_notice": "سيتم استخدام هذا أيضًا كعنوان للفوترة لطلبك هذا.",
         "delivery_option_title": "طريقة التسليم",
+<<<<<<< HEAD
         "contact_method_title": "جهات الاتصال",
+=======
+        "contact_method_title": "بياناتك الشخصية (بدون الحاجة لإنشاء حساب)",
+>>>>>>> 87ae04f097f3af21223d7c949998553aaa4cc13b
         "email_label": "بريد إلكتروني",
         "email_rollup_accessibility_label": "خيارات البريد الإلكتروني",
         "email_placeholder": "بريد إلكتروني",
@@ -4589,8 +4605,12 @@
       "one": "{{ count }} منتج",
       "other": "{{ count }} منتجات"
     },
+<<<<<<< HEAD
     "search_results_resource_queries": "اقتراحات البحث",
     "free_shipping_unlocked": "🎉 لقد حصلت على الشحن المجاني وسيروم الأظافر المجاني"
+=======
+    "search_results_resource_queries": "اقتراحات البحث"
+>>>>>>> 87ae04f097f3af21223d7c949998553aaa4cc13b
   },
   "fields": {
     "separator": "إلى"
