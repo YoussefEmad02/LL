@@ -352,7 +352,7 @@
   "shopify": {
     "checkout": {
       "contact": {
-        "email_or_phone_label": "Contact Information"
+        "contact_method_title": "Contact Information"
       }
     }
   }
