@@ -2363,7 +2363,9 @@
         "billing_address_title": "عنوان الفواتير",
         "shipping_address_title": "عنوان الشحن",
         "shipping_method_title": "طريقة الشحن",
-        "tracking_number": "رقم التتبع:"
+        "tracking_number": "رقم التتبع:",
+        "title": "شكراً لك على الشراء",
+        "confirmation_email_sent_text": "تم إرسال بريد إلكتروني للتأكيد إلى %{email}"
       },
       "shop_policies": {
         "legal_notice": "إشعار قانوني",
