@@ -352,7 +352,7 @@
   "shopify": {
     "checkout": {
       "contact": {
-        "contact_method_title": "Contact Information"
+        "contact_method_title": "Your Details (No sign-up required)"
       }
     }
   }
