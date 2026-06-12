@@ -1,8 +1,8 @@
 {% liquid
   assign threshold = 49900
-  assign remaining = threshold | minus: cart.total_price
 %}
 
+{% if cart.total_price >= threshold %}
 <style>
   .free-shipping-upsell {
     margin: var(--margin-md) var(--margin-lg) var(--margin-lg) var(--margin-lg);
@@ -13,19 +13,6 @@
     border-radius: var(--style-border-radius-md);
     background: rgb(var(--color-background-rgb));
     box-shadow: var(--shadow-button);
-  }
-  .free-shipping-upsell__title {
-    margin: 0 0 var(--margin-xs) 0;
-    font-family: var(--font-body--family);
-    font-weight: bold;
-    color: var(--color-foreground);
-    font-size: var(--font-size--md);
-  }
-  .free-shipping-upsell__text {
-    margin: 0 0 var(--margin-md) 0;
-    font-size: var(--font-size--sm);
-    color: rgb(var(--color-foreground-rgb) / var(--opacity-70));
-    line-height: var(--line-height--body-normal);
   }
   .free-shipping-upsell__success {
     margin: 0;
@@ -45,12 +32,6 @@
     .free-shipping-upsell__inner {
       padding: var(--padding-md);
     }
-    .free-shipping-upsell__title {
-      font-size: var(--font-size--sm);
-    }
-    .free-shipping-upsell__text {
-      font-size: var(--font-size--xs);
-    }
     .free-shipping-upsell__success {
       font-size: var(--font-size--sm);
     }
@@ -59,17 +40,9 @@
 
 <div class="free-shipping-upsell">
   <div class="free-shipping-upsell__inner">
-    {% if cart.total_price < threshold %}
-      <p class="free-shipping-upsell__title">
-        You're <span style="color: #ff0000;">{{ remaining | money }}</span> away from FREE shipping & Complimentary Nail Serum
-      </p>
-      <p class="free-shipping-upsell__text">
-        Add Lash Serum for <span style="color: #ff0000;">270.00</span> or any product you want and unlock FREE shipping & Complimentary Nail Serum
-      </p>
-    {% else %}
-      <p class="free-shipping-upsell__success">
-        <span>🎉</span> You unlocked FREE shipping & Complimentary Nail Serum
-      </p>
-    {% endif %}
+    <p class="free-shipping-upsell__success">
+      <span>🎉</span> You unlocked FREE shipping & Complimentary Nail Serum
+    </p>
   </div>
 </div>
+{% endif %}
