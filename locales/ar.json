@@ -1867,7 +1867,10 @@
         "autocomplete_single_item": "يتوفر عنصر واحد",
         "autocomplete_close": "إغلاق الاقتراحات",
         "tooltip_accessibility_label": "مزيد من المعلومات",
-        "submit_for_review_button_label": "إرسال للمراجعة"
+        "submit_for_review_button_label": "إرسال للمراجعة",
+        "skip_to_content": "الانتقال إلى المحتوى الأساسي",
+        "complete_purchase_button_label": "أكمل طلبك",
+        "finalize_order_accessibility_label": "إنهاء الطلب"
       },
       "embed": {
         "header": {
