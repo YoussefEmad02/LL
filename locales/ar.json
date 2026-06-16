@@ -183,7 +183,9 @@
           "one": "المجموع الفرعي · %{count} منتج",
           "other": "المجموع الفرعي · %{count} منتجات"
         },
-        "recurring_subtotal_label": "المجموع الفرعي المتكرر"
+        "recurring_subtotal_label": "المجموع الفرعي المتكرر",
+        "free_shipping_discount_label": "ًالشحن مجانا",
+        "applied_free_shipping_discount_label": "مُطبَّق"
       },
       "payment_summary": {
         "free_label": "مجاني"
