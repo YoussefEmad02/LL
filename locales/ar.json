@@ -53,7 +53,8 @@
         "shipping_method_title": "طريقة الشحن",
         "shipping_method_rollup_accessibility_label": "خيارات طريقة الشحن",
         "free_rate_label": "مجاني",
-        "delivery_title": "التوصيل"
+        "delivery_title": "التوصيل",
+        "split_shipping_option_free": "ًالشحن مجاني"
       },
       "merchandise_unavailable_in_buyer_location": {
         "missing_country_fallback": "بلدك"
@@ -184,7 +185,7 @@
           "other": "المجموع الفرعي · %{count} منتجات"
         },
         "recurring_subtotal_label": "المجموع الفرعي المتكرر",
-        "free_shipping_discount_label": "ًالشحن مجانا",
+        "free_shipping_discount_label": "ًالشحن مجاني",
         "applied_free_shipping_discount_label": "مُطبَّق"
       },
       "payment_summary": {
