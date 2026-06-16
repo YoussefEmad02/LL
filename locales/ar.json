@@ -130,7 +130,8 @@
         "choose_billing_address": "اختر عنوان الفوترة",
         "choose_delivery_strategy": "اختر طريقة التوصيل",
         "choose_payment_method": "اختر طريقة الدفع",
-        "choose_shipping_method": "اختر طريقة الشحن"
+        "choose_shipping_method": "اختر طريقة الشحن",
+        "complete_purchase_button_label": "اكمل الطلب"
       },
       "delivery_options": {
         "ship_to_address": "عنوان الشحن",
