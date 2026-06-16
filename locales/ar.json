@@ -123,6 +123,9 @@
         "shipping_address_title": "عنوان الشحن",
         "missing_shipping_address_banner": {
           "contact_us": "اتصل بنا"
+        },
+        "marker": {
+          "shipping": "عنوان الشحن"
         }
       },
       "general": {
