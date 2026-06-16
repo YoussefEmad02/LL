@@ -52,7 +52,8 @@
         },
         "shipping_method_title": "طريقة الشحن",
         "shipping_method_rollup_accessibility_label": "خيارات طريقة الشحن",
-        "free_rate_label": "مجاني"
+        "free_rate_label": "مجاني",
+        "delivery_title": "التوصيل"
       },
       "merchandise_unavailable_in_buyer_location": {
         "missing_country_fallback": "بلدك"
@@ -179,6 +180,11 @@
       },
       "payment_summary": {
         "free_label": "مجاني"
+      },
+      "deliverability": {
+        "not_deliverable": {
+          "label": "لا يوجد توصيل"
+        }
       }
     },
     "attributes": {
