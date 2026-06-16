@@ -186,7 +186,8 @@
         },
         "recurring_subtotal_label": "المجموع الفرعي المتكرر",
         "free_shipping_discount_label": "ًالشحن مجاني",
-        "applied_free_shipping_discount_label": "مُطبَّق"
+        "applied_free_shipping_discount_label": "مُطبَّق",
+        "total_savings": "إجمالي التوفير"
       },
       "payment_summary": {
         "free_label": "مجاني"
