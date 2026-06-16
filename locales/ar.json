@@ -44,7 +44,9 @@
         "no_rates_for_country_notice": "لم يتم العثور على أسعار شحن لهذا العنوان",
         "address_form": {
           "add_address": "إضافة عنوان"
-        }
+        },
+        "shipping_method_title": "طريقة الشحن",
+        "shipping_method_rollup_accessibility_label": "خيارات طريقة الشحن"
       },
       "merchandise_unavailable_in_buyer_location": {
         "missing_country_fallback": "بلدك"
@@ -120,7 +122,8 @@
         },
         "choose_billing_address": "اختر عنوان الفوترة",
         "choose_delivery_strategy": "اختر طريقة التوصيل",
-        "choose_payment_method": "اختر طريقة الدفع"
+        "choose_payment_method": "اختر طريقة الدفع",
+        "choose_shipping_method": "اختر طريقة الشحن"
       },
       "delivery_options": {
         "ship_to_address": "عنوان الشحن",
