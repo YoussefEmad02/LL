@@ -37,7 +37,9 @@
         "optional_phone_label": "الهاتف (اختياري)",
         "phone_placeholder": "هاتف",
         "phone_tooltip": "في حال احتجنا إلى الاتصال بك بخصوص طلبك",
-        "delivery_option_title": "طريقة التوصيل"
+        "delivery_option_title": "طريقة التوصيل",
+        "governorate_label": "محافظة",
+        "governorate_placeholder": "محافظة"
       },
       "shipping": {
         "shipping_used_as_billing_notice": "سيُستخدم هذا العنوان أيضاً كعنوان للفواتير.",
@@ -187,6 +189,9 @@
       "order": {
         "cash_on_delivery": "الدفع عند الاستلام"
       }
+    },
+    "addresses": {
+      "governorate": "محافظة"
     }
   },
   "accessibility": {
