@@ -19,7 +19,9 @@
         "first_name_label": "الاسم الأول",
         "optional_first_name_label": "الاسم الأول (اختياري)",
         "email_or_phone_label": "البريد الإلكتروني أو رقم الهاتف المحمول",
-        "email_or_phone_placeholder": "البريد الإلكتروني أو رقم الهاتف المحمول"
+        "email_or_phone_placeholder": "البريد الإلكتروني أو رقم الهاتف المحمول",
+        "last_name_label": "اسم العائلة",
+        "optional_last_name_label": "اسم العائلة (اختياري)"
       },
       "shipping": {
         "shipping_used_as_billing_notice": "سيُستخدم هذا العنوان أيضاً كعنوان للفواتير.",
@@ -40,16 +42,24 @@
         "address_first_name_contains_url": "لا يمكن أن يحتوي الاسم الأول على عنوان URL",
         "address_first_name_contains_mathematical_symbols": "لا يجوز أن يحتوي الاسم الأول على رموز رياضية",
         "email_or_phone_blank": "أدخل بريدًا إلكترونيًا أو رقم هاتف",
-        "email_or_phone_invalid": "أدخل بريدًا إلكترونيًا أو رقم هاتف جوال صحيحًا"
+        "email_or_phone_invalid": "أدخل بريدًا إلكترونيًا أو رقم هاتف جوال صحيحًا",
+        "address_last_name_blank": "أدخل اسم العائلة",
+        "address_last_name_too_long": "اسم العائلة طويل جدًا (الحد الأقصى 255 حرفًا)",
+        "address_last_name_contains_emojis": "لا يمكن أن يحتوي اسم العائلة على رموز تعبيرية",
+        "address_last_name_contains_html_tags": "لا يمكن أن يحتوي اسم العائلة على وسوم HTML",
+        "address_last_name_contains_url": "لا يمكن أن يحتوي اسم العائلة على عنوان URL",
+        "address_last_name_contains_mathematical_symbols": "لا يجوز أن يحتوي اسم العائلة على رموز رياضية"
       },
       "wallets": {
         "errors": {
           "missing": {
             "first_name": "أدخل الاسم الأول",
-            "billing_first_name": "أدخل اسمك الأول في عنوان الفوترة"
+            "billing_first_name": "أدخل اسمك الأول في عنوان الفوترة",
+            "last_name": "أدخل اسم العائلة"
           },
           "formatting": {
-            "first_name_too_long": "الاسم الأول يحتوي على عدد كبير جدًا من الأحرف"
+            "first_name_too_long": "الاسم الأول يحتوي على عدد كبير جدًا من الأحرف",
+            "last_name_too_long": "يحتوي اسم العائلة على عدد كبير جدًا من الأحرف"
           }
         }
       },
@@ -70,10 +80,18 @@
         "order_status_payments_app_pending_payment_description_buyer_action_required_with_missing_payment": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
         "order_status_payments_app_pending_payment_description_buyer_action_required_with_missing_pick_up": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
         "order_updates_subscribe_to_email_or_phone_notifications": "احصل على تحديثات الشحن عبر البريد الإلكتروني أو الرسائل النصية"
+      },
+      "general": {
+        "errors": {
+          "payment": {
+            "credit_card_last_name_required": "لا يمكن أن يكون اسم العائلة فارغًا"
+          }
+        }
       }
     },
     "attributes": {
-      "first_name": "الاسم الأول"
+      "first_name": "الاسم الأول",
+      "last_name": "اسم العائلة"
     },
     "errors": {
       "full_name_required": "أدخل الاسم الأول واسم العائلة"
