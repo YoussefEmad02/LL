@@ -11,7 +11,11 @@
   "shopify": {
     "checkout": {
       "contact": {
-        "contact_method_title": "بياناتك الشخصية (بدون الحاجة لإنشاء حساب)"
+        "contact_method_title": "بياناتك الشخصية (بدون الحاجة لإنشاء حساب)",
+        "shipping_used_as_billing_notice": "سيُستخدم هذا العنوان أيضاً كعنوان للفواتير."
+      },
+      "shipping": {
+        "shipping_used_as_billing_notice": "سيُستخدم هذا العنوان أيضاً كعنوان للفواتير."
       }
     }
   },
