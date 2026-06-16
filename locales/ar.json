@@ -152,6 +152,9 @@
             "other": "إزالة العنصر"
           }
         }
+      },
+      "payment": {
+        "title": "الدفع"
       }
     },
     "attributes": {
