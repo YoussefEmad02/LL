@@ -22,7 +22,16 @@
         "email_or_phone_placeholder": "البريد الإلكتروني أو رقم الهاتف المحمول",
         "last_name_label": "اسم العائلة",
         "optional_last_name_label": "اسم العائلة (اختياري)",
-        "city_label": "المدينة"
+        "city_label": "المدينة",
+        "address_title": "عنوان",
+        "stored_addresses_label": "العناوين المحفوظة",
+        "available_addresses_label": "العناوين المتاحة",
+        "new_address_label": "استخدم عنوانًا جديدًا",
+        "address1_label": "عنوان",
+        "address2_label": "شقة، جناح، إلخ",
+        "optional_address2_label": "شقة، جناح، إلخ. (اختياري)",
+        "different_shipping_address_label": "الشحن إلى عنوان مختلف",
+        "different_shipping_address_text": "استخدم عنوانًا لمرة واحدة لهذا الطلب"
       },
       "shipping": {
         "shipping_used_as_billing_notice": "سيُستخدم هذا العنوان أيضاً كعنوان للفواتير.",
@@ -92,9 +101,20 @@
       "general": {
         "errors": {
           "payment": {
-            "credit_card_last_name_required": "لا يمكن أن يكون اسم العائلة فارغًا"
+            "credit_card_last_name_required": "لا يمكن أن يكون اسم العائلة فارغًا",
+            "invalid_address_type": "نوع العنوان المقدم غير صالح لطريقة الدفع هذه",
+            "paypal_express_address_invalid": "أعاد باي بال عنوانًا غير صالح"
+          },
+          "delivery": {
+            "destination_address_required": "يلزم إدخال عنوان الوجهة للمتابعة"
           }
-        }
+        },
+        "choose_billing_address": "اختر عنوان الفوترة"
+      },
+      "delivery_options": {
+        "ship_to_address": "عنوان الشحن",
+        "shipping_address": "عنوان الشحن",
+        "company_location_no_address_banner": "سيتم تقديم الطلبات التي يتم شحنها إلى مواقع بدون عنوان للمراجعة"
       }
     },
     "attributes": {
