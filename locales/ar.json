@@ -46,7 +46,8 @@
           "add_address": "إضافة عنوان"
         },
         "shipping_method_title": "طريقة الشحن",
-        "shipping_method_rollup_accessibility_label": "خيارات طريقة الشحن"
+        "shipping_method_rollup_accessibility_label": "خيارات طريقة الشحن",
+        "free_rate_label": "مجاني"
       },
       "merchandise_unavailable_in_buyer_location": {
         "missing_country_fallback": "بلدك"
@@ -166,6 +167,13 @@
       },
       "customer_account": {
         "save_my_information_label": "احفظ هذه المعلومات لاستخدامها في المرة القادمة."
+      },
+      "order_summary": {
+        "free_total_label": "مجاني",
+        "free_shipping_total_label": "مجاني"
+      },
+      "payment_summary": {
+        "free_label": "مجاني"
       }
     },
     "attributes": {
