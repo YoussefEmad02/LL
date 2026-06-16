@@ -155,7 +155,8 @@
         }
       },
       "payment": {
-        "title": "الدفع"
+        "title": "الدفع",
+        "billing_must_match_shipping_notice": "يجب أن يتطابق عنوان الفوترة الخاص بطريقة الدفع مع عنوان الشحن"
       }
     },
     "attributes": {
