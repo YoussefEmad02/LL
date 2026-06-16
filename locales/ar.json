@@ -35,7 +35,10 @@
       },
       "shipping": {
         "shipping_used_as_billing_notice": "سيُستخدم هذا العنوان أيضاً كعنوان للفواتير.",
-        "no_rates_for_country_notice": "لم يتم العثور على أسعار شحن لهذا العنوان"
+        "no_rates_for_country_notice": "لم يتم العثور على أسعار شحن لهذا العنوان",
+        "address_form": {
+          "add_address": "إضافة عنوان"
+        }
       },
       "merchandise_unavailable_in_buyer_location": {
         "missing_country_fallback": "بلدك"
