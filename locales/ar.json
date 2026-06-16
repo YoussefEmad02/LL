@@ -180,8 +180,8 @@
         "free_shipping_total_label": "مجاني",
         "subtotal_label": "المجموع الفرعي",
         "subtotal_label_with_quantity": {
-          "one": "المجموع الفرعي · %{count} عنصر",
-          "other": "المجموع الفرعي · %{count} عناصر"
+          "one": "المجموع الفرعي · %{count} منتج",
+          "other": "المجموع الفرعي · %{count} منتجات"
         },
         "recurring_subtotal_label": "المجموع الفرعي المتكرر"
       },
