@@ -115,7 +115,11 @@
         "order_status_payments_app_pending_payment_description_buyer_action_required_with_missing": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
         "order_status_payments_app_pending_payment_description_buyer_action_required_with_missing_payment": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
         "order_status_payments_app_pending_payment_description_buyer_action_required_with_missing_pick_up": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
-        "order_updates_subscribe_to_email_or_phone_notifications": "احصل على تحديثات الشحن عبر البريد الإلكتروني أو الرسائل النصية"
+        "order_updates_subscribe_to_email_or_phone_notifications": "احصل على تحديثات الشحن عبر البريد الإلكتروني أو الرسائل النصية",
+        "customer_information_title": "تفاصيل الطلب",
+        "contact_information_title": "معلومات الاتصال",
+        "thank_you_title": "تم تأكيد طلبك",
+        "confirmed_title": "تم تأكيد طلبك"
       },
       "general": {
         "errors": {
@@ -171,7 +175,8 @@
         "billing_must_match_shipping_notice": "يجب أن يتطابق عنوان الفوترة الخاص بطريقة الدفع مع عنوان الشحن.",
         "card_security_notice": "جميع المعاملات آمنة ومشفرة.",
         "card_security_vault_notice": "نحتاج إلى بياناتك لإتمام عمليات الدفع المستقبلية. جميع المعاملات آمنة ومشفرة.",
-        "card_information_notice": "جميع المعاملات آمنة ومشفرة. لا يتم تخزين معلومات بطاقة الائتمان مطلقاً."
+        "card_information_notice": "جميع المعاملات آمنة ومشفرة. لا يتم تخزين معلومات بطاقة الائتمان مطلقاً.",
+        "payment_method": "طريقة الدفع"
       },
       "customer_account": {
         "save_my_information_label": "احفظ هذه المعلومات لاستخدامها في المرة القادمة."
