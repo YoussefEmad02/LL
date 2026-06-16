@@ -126,6 +126,24 @@
         "shipping_address": "عنوان الشحن",
         "company_location_no_address_banner": "سيتم تقديم الطلبات التي يتم شحنها إلى مواقع بدون عنوان للمراجعة",
         "free_total_label": "مجاني"
+      },
+      "payment_gateway": {
+        "cash_on_delivery_label": "الدفع عند الاستلام"
+      },
+      "review": {
+        "blocks": {
+          "change_delivery_method_link_label": "تغيير طريقة التسليم"
+        }
+      },
+      "notice_banner": {
+        "individual_violations_title": {
+          "DeliveryViolations": "عنوان الشحن"
+        },
+        "validation_errors_banner": {
+          "section_label": {
+            "delivery": "التوصيل"
+          }
+        }
       }
     },
     "attributes": {
