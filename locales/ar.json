@@ -15,7 +15,9 @@
         "shipping_used_as_billing_notice": "سيُستخدم هذا العنوان أيضاً كعنوان للفواتير.",
         "country_label": "الدولة/المنطقة",
         "country_code": "رمز البلد/المنطقة",
-        "phone_country_code_label": "رمز مفتاح البلد"
+        "phone_country_code_label": "رمز مفتاح البلد",
+        "first_name_label": "الاسم الأول",
+        "optional_first_name_label": "الاسم الأول (اختياري)"
       },
       "shipping": {
         "shipping_used_as_billing_notice": "سيُستخدم هذا العنوان أيضاً كعنوان للفواتير.",
@@ -28,8 +30,31 @@
         "address_country_blank": "اختر دولة/منطقة",
         "address_country_not_supported": "لا نوفر خدمة الشحن إلى هذا البلد أو المنطقة. أدخل عنوان شحن جديد وحاول مرة أخرى.",
         "address_zip_invalid_for_country_and_province": "أدخل رمزًا بريديًا صحيحًا لـ %{province}، %{country}",
-        "address_country_invalid": "اختر دولة/منطقة من القائمة"
+        "address_country_invalid": "اختر دولة/منطقة من القائمة",
+        "address_first_name_blank": "أدخل الاسم الأول",
+        "address_first_name_too_long": "الاسم الأول طويل جدًا (الحد الأقصى 255 حرفًا)",
+        "address_first_name_contains_emojis": "لا يمكن أن يحتوي الاسم الأول على رموز تعبيرية",
+        "address_first_name_contains_html_tags": "لا يمكن أن يحتوي الاسم الأول على علامات HTML",
+        "address_first_name_contains_url": "لا يمكن أن يحتوي الاسم الأول على عنوان URL",
+        "address_first_name_contains_mathematical_symbols": "لا يجوز أن يحتوي الاسم الأول على رموز رياضية"
+      },
+      "wallets": {
+        "errors": {
+          "missing": {
+            "first_name": "أدخل الاسم الأول",
+            "billing_first_name": "أدخل اسمك الأول في عنوان الفوترة"
+          },
+          "formatting": {
+            "first_name_too_long": "الاسم الأول يحتوي على عدد كبير جدًا من الأحرف"
+          }
+        }
       }
+    },
+    "attributes": {
+      "first_name": "الاسم الأول"
+    },
+    "errors": {
+      "full_name_required": "أدخل الاسم الأول واسم العائلة"
     }
   },
   "accessibility": {
