@@ -21,7 +21,8 @@
         "email_or_phone_label": "البريد الإلكتروني أو رقم الهاتف المحمول",
         "email_or_phone_placeholder": "البريد الإلكتروني أو رقم الهاتف المحمول",
         "last_name_label": "اسم العائلة",
-        "optional_last_name_label": "اسم العائلة (اختياري)"
+        "optional_last_name_label": "اسم العائلة (اختياري)",
+        "city_label": "المدينة"
       },
       "shipping": {
         "shipping_used_as_billing_notice": "سيُستخدم هذا العنوان أيضاً كعنوان للفواتير.",
@@ -48,14 +49,21 @@
         "address_last_name_contains_emojis": "لا يمكن أن يحتوي اسم العائلة على رموز تعبيرية",
         "address_last_name_contains_html_tags": "لا يمكن أن يحتوي اسم العائلة على وسوم HTML",
         "address_last_name_contains_url": "لا يمكن أن يحتوي اسم العائلة على عنوان URL",
-        "address_last_name_contains_mathematical_symbols": "لا يجوز أن يحتوي اسم العائلة على رموز رياضية"
+        "address_last_name_contains_mathematical_symbols": "لا يجوز أن يحتوي اسم العائلة على رموز رياضية",
+        "address_city_blank": "ادخل مدينة",
+        "address_city_too_long": "المدينة طويلة جدًا (الحد الأقصى 255 حرفًا)",
+        "address_city_contains_emojis": "لا يمكن للمدينة أن تحتوي على رموز تعبيرية",
+        "address_city_contains_html_tags": "لا يمكن للمدينة أن تحتوي على علامات HTML",
+        "address_city_contains_mathematical_symbols": "لا يمكن أن تحتوي المدينة على رموز رياضية"
       },
       "wallets": {
         "errors": {
           "missing": {
             "first_name": "أدخل الاسم الأول",
             "billing_first_name": "أدخل اسمك الأول في عنوان الفوترة",
-            "last_name": "أدخل اسم العائلة"
+            "last_name": "أدخل اسم العائلة",
+            "city": "ادخل مدينة",
+            "billing_city": "أدخل مدينة عنوان الفوترة"
           },
           "formatting": {
             "first_name_too_long": "الاسم الأول يحتوي على عدد كبير جدًا من الأحرف",
