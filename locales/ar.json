@@ -144,6 +144,14 @@
             "delivery": "التوصيل"
           }
         }
+      },
+      "split_delivery": {
+        "inventory_issue_banner": {
+          "remove_item": {
+            "one": "إزالة العنصر",
+            "other": "إزالة العنصر"
+          }
+        }
       }
     },
     "attributes": {
