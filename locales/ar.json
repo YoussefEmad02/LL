@@ -160,6 +160,11 @@
     },
     "errors": {
       "full_name_required": "أدخل الاسم الأول واسم العائلة"
+    },
+    "notices": {
+      "order": {
+        "cash_on_delivery": "الدفع عند الاستلام"
+      }
     }
   },
   "accessibility": {
