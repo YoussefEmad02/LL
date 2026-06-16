@@ -39,7 +39,10 @@
         "phone_tooltip": "في حال احتجنا إلى الاتصال بك بخصوص طلبك",
         "delivery_option_title": "طريقة التوصيل",
         "governorate_label": "محافظة",
-        "governorate_placeholder": "محافظة"
+        "governorate_placeholder": "محافظة",
+        "postal_code_label": "رمز بريدي",
+        "optional_postal_code_label": "الرمز البريدي (اختياري)",
+        "postal_code_placeholder": "رمز بريدي"
       },
       "shipping": {
         "shipping_used_as_billing_notice": "سيُستخدم هذا العنوان أيضاً كعنوان للفواتير.",
@@ -191,7 +194,8 @@
       }
     },
     "addresses": {
-      "governorate": "محافظة"
+      "governorate": "محافظة",
+      "postal_code": "رمز بريدي"
     }
   },
   "accessibility": {
