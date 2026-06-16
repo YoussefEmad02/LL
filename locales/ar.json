@@ -181,7 +181,7 @@
         "subtotal_label": "المجموع الفرعي",
         "subtotal_label_with_quantity": {
           "one": "المجموع الفرعي · %{count} عنصر",
-          "other": "المجموع الفرعي · %{count} عنصرًا"
+          "other": "المجموع الفرعي · %{count} عناصر"
         },
         "recurring_subtotal_label": "المجموع الفرعي المتكرر"
       },
