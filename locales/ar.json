@@ -31,7 +31,12 @@
         "address2_label": "شقة، جناح، إلخ",
         "optional_address2_label": "شقة، جناح، إلخ. (اختياري)",
         "different_shipping_address_label": "الشحن إلى عنوان مختلف",
-        "different_shipping_address_text": "استخدم عنوانًا لمرة واحدة لهذا الطلب"
+        "different_shipping_address_text": "استخدم عنوانًا لمرة واحدة لهذا الطلب",
+        "phone_label": "هاتف",
+        "phone_rollup_accessibility_label": "الهاتف (اختياري)",
+        "optional_phone_label": "الهاتف (اختياري)",
+        "phone_placeholder": "هاتف",
+        "phone_tooltip": "في حال احتجنا إلى الاتصال بك بخصوص طلبك"
       },
       "shipping": {
         "shipping_used_as_billing_notice": "سيُستخدم هذا العنوان أيضاً كعنوان للفواتير.",
