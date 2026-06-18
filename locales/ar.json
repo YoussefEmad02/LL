@@ -141,7 +141,10 @@
         "order_status_updates_with_email": "ستتلقى تحديثات الشحن والتسليم عبر البريد الإلكتروني",
         "order_updates_subscribe_to_email_notifications": "احصل على تحديثات الشحن عبر البريد الإلكتروني",
         "order_updates_title": "تحديثات الطلبات",
-        "contact_us_html": "هل تحتاج إلى مساعدة؟ %{contact_us}"
+        "contact_us_html": "هل تحتاج إلى مساعدة؟ %{contact_us}",
+        "payment_method_title": "طريقة الدفع",
+        "payment_method_not_charged": "لم يتم تحصيل رسوم",
+        "choose_payment_method_later": "اختر طريقة الدفع لاحقًا"
       },
       "general": {
         "errors": {
