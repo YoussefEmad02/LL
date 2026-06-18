@@ -562,7 +562,7 @@
       "other": "{{ count }} منتجات"
     },
     "search_results_resource_queries": "اقتراحات البحث",
-    "free_shipping_unlocked": "🎉 لقد حصلت على الشحن المجاني وسيروم الأظافر المجاني"
+    "free_shipping_unlocked": "🎉 لقد حصلت على هدية سيرم أظافر أو شحن مجاني سيتم الاتصال بك لتحديدها"
   },
   "fields": {
     "separator": "إلى"
