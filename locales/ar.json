@@ -135,7 +135,8 @@
           "shipping": "عنوان الشحن"
         },
         "login_title": "سجّل الدخول لعرض جميع تفاصيل الطلب",
-        "shipping_method_title": "طريقة الشحن"
+        "shipping_method_title": "طريقة الشحن",
+        "billing_address_title": "عنوان الدفع"
       },
       "general": {
         "errors": {
