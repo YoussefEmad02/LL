@@ -202,7 +202,7 @@
         "rollup_accessibility_label": "خيارات الحساب",
         "saved_address_option_description": {
           "one": "لديك {{count}} عنوانًا محفوظًا.",
-          "other": "لديك {{count}} عنو=دمحفوظًا"
+          "other": "لديك {{count}} عناوين محفوظه"
         },
         "saved_address_option_link": "استخدم عنوانًا محفوظًا",
         "saved_address_modal_title": "استخدم عنواني المحفوظ"
