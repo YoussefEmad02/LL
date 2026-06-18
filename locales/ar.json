@@ -144,7 +144,9 @@
         "contact_us_html": "هل تحتاج إلى مساعدة؟ %{contact_us}",
         "payment_method_title": "طريقة الدفع",
         "payment_method_not_charged": "لم يتم تحصيل رسوم",
-        "choose_payment_method_later": "اختر طريقة الدفع لاحقًا"
+        "choose_payment_method_later": "اختر طريقة الدفع لاحقًا",
+        "title": "شكراً لشرائك",
+        "page_title_no_name": "شكرًا لك"
       },
       "general": {
         "errors": {
