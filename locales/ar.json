@@ -223,7 +223,8 @@
         "total_label": "المجموع",
         "partial_total_label": "المجموع",
         "shipping_label": "الشحن",
-        "multiple_shipping_lines_label": "إجمالي الشحن"
+        "multiple_shipping_lines_label": "إجمالي الشحن",
+        "title": "ملخص الطلب"
       },
       "payment_summary": {
         "free_label": "مجاني"
