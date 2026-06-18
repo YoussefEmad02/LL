@@ -194,7 +194,18 @@
         "billing_address_title": "عنوان الدفع"
       },
       "customer_account": {
-        "save_my_information_label": "احفظ هذه المعلومات لاستخدامها في المرة القادمة."
+        "save_my_information_label": "احفظ هذه المعلومات لاستخدامها في المرة القادمة.",
+        "have_an_account_label": "لديك حساب؟",
+        "sign_in_link_label": "تسجيل الدخول",
+        "sign_out_link_label": "تسجيل الخروج",
+        "rollup_label": "حساب",
+        "rollup_accessibility_label": "خيارات الحساب",
+        "saved_address_option_description": {
+          "one": "لديك {{count}} عنوانًا محفوظًا.",
+          "other": "لديك {{count}} عنو=دمحفوظًا"
+        },
+        "saved_address_option_link": "استخدم عنوانًا محفوظًا",
+        "saved_address_modal_title": "استخدم عنواني المحفوظ"
       },
       "order_summary": {
         "free_total_label": "مجاني",
