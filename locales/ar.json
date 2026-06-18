@@ -42,7 +42,10 @@
         "governorate_placeholder": "محافظة",
         "postal_code_label": "رمز بريدي",
         "optional_postal_code_label": "الرمز البريدي (اختياري)",
-        "postal_code_placeholder": "رمز بريدي"
+        "postal_code_placeholder": "رمز بريدي",
+        "email_label": "بريد إلكتروني",
+        "email_rollup_accessibility_label": "خيارات البريد الإلكتروني",
+        "email_placeholder": "بريد إلكتروني"
       },
       "shipping": {
         "shipping_used_as_billing_notice": "سيُستخدم هذا العنوان أيضاً كعنوان للفواتير.",
